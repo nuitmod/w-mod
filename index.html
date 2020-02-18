@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+  <title>main aiohttp</title>
+</head>
+<body>
+<h5>aio index</h5>
+  <section id="fetch-dat">
+    <h6>fetch request</h6>
+    <form>
+     <input id="dat" type="text" name="data" value="" placeholder="data">
+     <input id="in-btn" type="button" name="" value="in_api">
+     <input id="btn-fetch" type="button" name="" value="fetch">
+    </form>
+    <br>
+    <h5>aio output</h5>
+    <div id="in-out"></div>
+    <h5>py fetch output</h5>
+    <div id="f-out"></div>
+    <br>
+</section>
+
+<script>
+
+var url_lh="http://localhost:8080/api"
+var url_hrk="https://py-pro-i.herokuapp.com/api"
+
+async function inner_req(){
+  var fetch_data=await fetch(url_lh)
+  var data = await fetch_data.json()
+  console.log("result of inner fetch ", data);
+  $('#in-out').text(data.dat);
+}
+
+async function fetch_dat(){
+  var fetch_data=await fetch(url_hrk)
+  var data = await fetch_data.json()
+  //console.log("result of fetch ", data);
+  $('#f-out').text(data.dat);
+  }
+
+
+$('#in-btn').on('click', inner_req)
+$('#btn-fetch').on('click', fetch_dat)
+
+</script>
+
+<script></script>
+<script>
+
+</script>
+</body>
+</html>
