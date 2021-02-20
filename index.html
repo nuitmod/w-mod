@@ -12,7 +12,17 @@
   <title>main aiohttp</title>
 </head>
 <body>
+  <style media="screen">
+    body{
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      color: ghostwhite;
+      background: #000;
+    }
+  </style>
 <h5>aio index</h5>
+<br>
   <section id="fetch-dat">
     <h6>fetch request</h6>
     <form>
@@ -21,13 +31,18 @@
      <input id="btn-fetch" type="button" name="" value="fetch">
     </form>
     <br>
-    <h5>aio output</h5>
+    <h5>aio output:</h5>
     <div id="in-out"></div>
-    <h5>py fetch output</h5>
+    <h5>py fetch output:</h5>
     <div id="f-out"></div>
     <br>
 </section>
-
+<div>
+  <iframe src="https://nuitmod.github.io/io_proj/amp/index.html" width="500" height="1000"
+    frameborder=0
+    sandbox="allow-scripts"  
+  ></iframe>
+</div>
 <script>
 
 var url_lh="http://localhost:8080/api"
@@ -47,15 +62,10 @@ async function fetch_dat(){
   $('#f-out').text(data.dat);
   }
 
-
 $('#in-btn').on('click', inner_req)
 $('#btn-fetch').on('click', fetch_dat)
 
 </script>
 
-<script></script>
-<script>
-
-</script>
 </body>
 </html>
