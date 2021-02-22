@@ -12,6 +12,11 @@
   <title>main aiohttp</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#000000" />
+
+<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
     </head>
     <body>
   <style media="screen">
@@ -48,6 +53,29 @@
     <div id="f-out"></div>
     <br>
 </section>
+
+<amp-list width="auto"
+  height="50"
+  layout="fixed-height"
+  src="https://pyw-prs.vercel.app/api">
+  <template type="amp-mustache">
+    <div class="url-entry">
+      <a href="{{mod1.name1}}">{{mod1.job1}}</a>
+    </div>
+</template>
+</amp-list>
+
+<amp-list width="auto"
+  height="50"
+  layout="fixed-height"
+  src="./api">
+  <template type="amp-mustache">
+    <div class="url-entry">
+      <a href="{{mod2.name2}}">{{mod2.job2}}</a>
+    </div>
+</template>
+</amp-list>
+
 <div>
   <iframe src="https://nuitmod.github.io/io_proj/amp/index.html" width="790" height="1399"
     frameborder=0
