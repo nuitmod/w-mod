@@ -9,6 +9,20 @@ var exp_data= {
       }
     }
 
+var item_data={
+  "items":[
+{
+        "name": "Ruth",
+        "job": "programmer"
+      },
+      {
+        "name": "Miut",
+        "job": "contacter"
+      }
+
+]
+}
+
 module.exports=(req,res)=>{
-  res.json(exp_data);
+  res.json(item_data);
 }
