@@ -17,15 +17,17 @@
             </turbo:content>
         </item>
 
- <item turbo="true">
-            
+<item turbo="true">
+      <title>nuit2</title>
+      <link>https://pyw-prs.vercel.app/index.html</link>
             <turbo:content>
                 <![CDATA[
                     <!-- Содержимое 2 страницы --> 
+ 
+<h1>2 data<h1>
                 ]]>
             </turbo:content>
         </item>
-        
 
      </channel>
 </rss>
