@@ -16,5 +16,16 @@
                 ]]>
             </turbo:content>
         </item>
+
+ <item turbo="true">
+            
+            <turbo:content>
+                <![CDATA[
+                    <!-- Содержимое 2 страницы --> 
+                ]]>
+            </turbo:content>
+        </item>
+        
+
      </channel>
 </rss>
