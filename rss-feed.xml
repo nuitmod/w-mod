@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" xmlns:yandex="http://news.yandex.ru">
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" xmlns:yandex="http://news.yandex.ru">
     <channel>
       <title>nuitmod.media</title>
         <link>https://pyw-prs.vercel.app</link>
         <description>Краткое описание канала</description>
-        <language>ru</language>
- 
+        <language>en</language>
         <item turbo="true">
           <title>nuitmod</title>
           <link>https://pyw-prs.vercel.app</link>
             <turbo:content>
                 <![CDATA[
                     <!-- Содержимое 1 страницы -->
-            <h1>py turbo!</h1>
- 
+                    <h1>py turbo!</h1>
+                    <h2>turbo content</h2>
                 ]]>
             </turbo:content>
         </item>
-</channel>
+     </channel>
 </rss>
