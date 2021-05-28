@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" xmlns:yandex="http://news.yandex.ru">
     <channel>
       <title>nuitmod.media</title>
-        <link>https://pyw-prs.vercel.app</link>
+        <link>https://w-mod.vercel.app</link>
         <description>Краткое описание канала</description>
         <language>en</language>
         <item turbo="true">
           <title>nuitmod</title>
-          <link>https://pyw-prs.vercel.app/index.html</link>
+          <link>https://w-mod.vercel.app/index.html</link>
             <turbo:content>
                 <![CDATA[
                     <!-- Содержимое 1 страницы -->
@@ -19,7 +19,7 @@
 
 <item turbo="true">
       <title>nuit2</title>
-      <link>https://pyw-prs.vercel.app/main.html</link>
+      <link>https://w-mod.vercel.app/main.html</link>
             <turbo:content>
                 <![CDATA[
                     <!-- Содержимое 2 страницы -->
