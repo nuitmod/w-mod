@@ -18,6 +18,7 @@
   <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
   <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
   <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
@@ -39,32 +40,54 @@
       color: ghostwhite;
       background-color: #000;
     }
+    amp-accordion {
+    background: var(--bg-menu);
+    }
+    amp-accordion a{
+      background: var(--bg-menu);
+      color: var(--bg-main);
+      font-size: 12px;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    amp-accordion .amp_a{
+    background: var(--bg-menu);
+    width: auto;
+  }
   </style>
-<h5>w-mod</h5>
-  <section id="fetch-dat">
-    <h6>fetch request</h6>
-    <form>
-     <input id="dat" type="text" name="data" value="" placeholder="data">
-     <button id="in-btn" type="button" name="" value="in_api"></button>
-     <button id="btn-fetch" type="button" name="" value="fetch"></button>
-    </form>
-    <h5>aio output:</h5>
-    <div id="in-out"></div>
-    <h5>py fetch output:</h5>
-    <div id="f-out"></div>
-    <br>
-</section>
-<amp-list width="auto"
-  height="50"
-  layout="fixed-height"
-  src="https://w-mod.vercel.app/api">
-  <template type="amp-mustache">
-    <div>
-      name: {{name}}
-      job: {{job}}
-    </div>
-  </template>
-</amp-list>
+<amp-accordion class="main" disable-session-states>
+  <section>
+    <h6 class="amp_a">_</h6>
+      <div>
+        <h5>w-mod</h5>
+        <section id="fetch-dat">
+          <h6>fetch request</h6>
+          <form>
+           <input id="dat" type="text" name="data" value="" placeholder="data">
+           <button id="in-btn" type="button" name="" value="in_api"></button>
+           <button id="btn-fetch" type="button" name="" value="fetch"></button>
+          </form>
+          <h5>aio output:</h5>
+          <div id="in-out"></div>
+          <h5>py fetch output:</h5>
+          <div id="f-out"></div>
+          <br>
+      </section>
+      <amp-list width="auto"
+        height="50"
+        layout="fixed-height"
+        src="https://w-mod.vercel.app/api">
+        <template type="amp-mustache">
+          <div>
+            name: {{name}}
+            job: {{job}}
+          </div>
+        </template>
+      </amp-list>
+      </div>
+  </section>
+</amp-accordion>  
+
 <!--
 <amp-list width="auto"
   height="50"
@@ -83,6 +106,14 @@
 </amp-audio> -->
 <br>
 <div>
+  <iframe src="https://nuitmod.github.io/ini_pwa/amp/index.html" width="500" height="1599"
+    frameborder=0
+    sandbox="allow-scripts allow-same-origin"
+  ></iframe>
+  <iframe src="https://nuitmod.github.io/mod_pwa/amp/index.html" width="500" height="1599"
+    frameborder=0
+    sandbox="allow-scripts allow-same-origin"
+  ></iframe>
   <iframe src="https://nuitmod.github.io/io_proj/amp/index.html" width="500" height="1599"
     frameborder=0
     sandbox="allow-scripts allow-same-origin"
@@ -91,11 +122,7 @@
     frameborder=0
     sandbox="allow-scripts allow-same-origin"
   ></iframe>
-  <iframe src="https://nuitmod.github.io/mod_pwa/amp/index.html" width="500" height="1599"
-    frameborder=0
-    sandbox="allow-scripts allow-same-origin"
-  ></iframe>
-  <iframe src="https://nuitmod.github.io/vi_pwa/index.html" width="600" height="1599"
+  <iframe src="https://nuitmod.github.io/mod_i/amp/index.html" width="500" height="1599"
     frameborder=0
     sandbox="allow-scripts allow-same-origin"
   ></iframe>
@@ -123,23 +150,20 @@
   $('#in-btn').on('click', inner_req)
   $('#btn-fetch').on('click', fetch_dat)
 
-</script>
-
-<script>
 
     // ServiceWorker Registration
-    if('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('sw.js').then(function(registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    // if('serviceWorker' in navigator) {
+    //     window.addEventListener('load', function() {
+    //         navigator.serviceWorker.register('sw.js').then(function(registration) {
+    //             // Registration was successful
+    //             console.log('ServiceWorker registration successful with scope: ', registration.scope);
 
-            }, function(err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
+    //         }, function(err) {
+    //             // registration failed :(
+    //             console.log('ServiceWorker registration failed: ', err);
+    //         });
+    //     });
+    // }
 
 
 </script>
